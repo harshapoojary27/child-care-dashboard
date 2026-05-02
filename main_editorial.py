@@ -67,22 +67,36 @@ html, body, [class*="css"] {
 /* Hide Streamlit sidebar and header completely */
 [data-testid="stSidebar"],
 [data-testid="collapsedControl"],
-[data-testid="stHeader"],
-[data-testid="stToolbar"],
 [data-testid="stDecoration"],
 #MainMenu,
-header,
 footer { display: none !important; }
 
-/* Remove the top gap Streamlit adds when header is hidden */
-.block-container {
-    padding-top: 0 !important;
-    padding-bottom: 1rem !important;
+[data-testid="stHeader"] {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
+
+[data-testid="stToolbar"] {
+    right: 0 !important;
+    top: 0 !important;
+}
+
+.block-container {
+    padding-top: 3.5 !important;
+    padding-bottom: 1rem !important;
+    margin-top: 0 !important;
+}
+
 section[data-testid="stMain"] > div:first-child {
     padding-top: 0 !important;
 }
-
+[data-testid="stAppViewBlockContainer"] {
+    padding-top: 0 !important;
+}
+div[class*="appview-container"] {
+    margin-top: 0 !important;
+}
 [data-testid="stAppViewContainer"] { background: #FAFAF8; }
 
 /* ── Masthead ── */
