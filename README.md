@@ -129,21 +129,3 @@ No changes to the code are needed for deployment; Streamlit Cloud reads `require
 | Excel support | openpyxl | ≥ 3.1 |
 
 ---
-
-## Viva Preparation Notes
-
-**Q: What is the purpose of median imputation?**  
-A: The median is robust to outliers — unlike the mean, a single extreme value does not distort it.  For this dataset, where custody counts can spike sharply during border surges, the median is the appropriate central tendency estimate for filling sparse missing values.
-
-**Q: Why use Polynomial Regression rather than just Linear?**  
-A: The HHS census shows a clear non-linear trajectory — rising sharply in late 2023, peaking in early 2024, then declining through 2025.  A linear model would systematically underfit both the rise and the decline.  A degree-3 polynomial captures the two inflection points in the trend.
-
-**Q: What does R² measure?**  
-A: R² (coefficient of determination) measures the proportion of variance in the target variable explained by the model.  A value of 1.0 indicates a perfect fit; 0.0 means the model explains no variance beyond predicting the mean.  Values above 0.85 are generally considered good for time-series regression.
-
-**Q: Why is the date range filter applied at the sidebar level?**  
-A: Filtering at the sidebar means every page in the app automatically uses the filtered dataset, ensuring consistency across all visualisations and model results without needing to replicate filter logic on each page.
-
----
-
-*Built for MCA Major Project submission — Data Analysis and Visualization Dashboard for Child Care Program.*
