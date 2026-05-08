@@ -1,6 +1,6 @@
 # HHS Unaccompanied Children Program — Data Analysis & Visualization Dashboard
 
-**MCA Major Project** | Python · Streamlit · Plotly · Scikit-learn
+Python · Streamlit · Plotly · Scikit-learn
 
 ---
 
